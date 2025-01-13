@@ -1,0 +1,12 @@
+{
+  "Header": {
+    "navKeys": ["home", "about", "projects", "forum", "contact"],
+    "nav": {
+      "home": "Home",
+      "about": "About",
+      "projects": "Projects",
+      "forum": "Forum",
+      "contact": "Contact"
+    }
+  }
+}
