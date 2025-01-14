@@ -9,11 +9,9 @@ export const LanguageSwitcher = () => {
 
   return (
     <Link href='/' locale={locale === 'en' ? 'pt' : 'en'}>
-      <p className="text-lg font-extralight">
-        <IconButton>
-          <Languages />
-        </IconButton>
-      </p>
+      <IconButton>
+        <Languages />
+      </IconButton>
     </Link>
   );
 };
