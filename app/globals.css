@@ -6,17 +6,19 @@
   --background: #fafafa;
   --foreground: #0a0a0a;
   --text: #0a0a0a;
-  --separator: #a3a3a3;
+  --border: #e5e5e5;
 }
 
 .dark {
   --background: #0a0a0a;
   --foreground: #fafafa;
   --text: #0a0a0a;
+  --border: #e5e5e5;
 }
 
 body {
   color: var(--foreground);
   background: var(--background);
   font-family: var(--font-jetBrains-mono);
+  font-weight: 100;
 }
