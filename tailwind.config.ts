@@ -12,7 +12,8 @@ export default {
         background: "var(--background)",
         foreground: "var(--foreground)",
         text: "var(--text)",
-        border: "var(--border)"
+        border: "var(--border)",
+        separator: "var(--separator)"
       },
     },
   },

@@ -2,11 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
+* { 
+  -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+  box-sizing: border-box;         /* Opera/IE 8+ */
+}
+
 :root {
   --background: #fafafa;
   --foreground: #0a0a0a;
   --text: #0a0a0a;
   --border: #e5e5e5;
+  --separator: #d4d4d4;
 }
 
 .dark {
@@ -14,11 +21,12 @@
   --foreground: #fafafa;
   --text: #0a0a0a;
   --border: #e5e5e5;
+  --separator: #d4d4d4;
 }
 
 body {
   color: var(--foreground);
   background: var(--background);
   font-family: var(--font-jetBrains-mono);
-  font-weight: 100;
+  font-weight: 200;
 }
