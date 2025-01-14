@@ -14,14 +14,16 @@
   --text: #0a0a0a;
   --border: #e5e5e5;
   --separator: #d4d4d4;
+  --secondary: #155e75;
 }
 
 .dark {
-  --background: #0a0a0a;
+  --background: #171717;
   --foreground: #fafafa;
   --text: #0a0a0a;
   --border: #e5e5e5;
   --separator: #d4d4d4;
+  --secondary: #0891b2;
 }
 
 body {

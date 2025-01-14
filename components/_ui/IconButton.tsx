@@ -9,7 +9,7 @@ type IconProps = {
 
 const IconButton: React.FC<IconProps> = ({ children, size = 24, color = "currentColor", tooltip }) => {
   return (
-    <div className="flex items-center justify-center hover:cursor-pointer hover:bg-border rounded-full p-2" title={tooltip}>
+    <div className="flex items-center justify-center hover:cursor-pointer hover:bg-secondary rounded-full p-2" title={tooltip}>
       {children}
     </div>
   );

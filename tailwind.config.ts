@@ -13,7 +13,8 @@ export default {
         foreground: "var(--foreground)",
         text: "var(--text)",
         border: "var(--border)",
-        separator: "var(--separator)"
+        separator: "var(--separator)",
+        secondary: "var(--secondary)"
       },
     },
   },
