@@ -3,7 +3,7 @@ import { HeaderButton } from "./HeaderButton";
 import SearchBar from "./SearchBar";
 import { ThemeSwitcher } from "./ThemeSwitcher";
 import { LanguageSwitcher } from "./LanguageSwitcher";
-import { Separator } from "../_ui/Separator";
+import { Separator } from "../../_ui/Separator";
 
 export const Header = () => {
   const t = useTranslations('Header'); 
@@ -28,7 +28,8 @@ export const Header = () => {
         </li>
         
       </ul>
-      <Separator noSpacingStart/>
+
+      <Separator noSpacingEnd noSpacingStart />
     </header>
   );
 };

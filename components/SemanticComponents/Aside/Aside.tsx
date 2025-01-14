@@ -1,7 +1,7 @@
+import IconButton from "@/components/_ui/IconButton";
+import { Separator } from "@/components/_ui/Separator";
 import { FileUser, Github, Linkedin, Mail } from "lucide-react";
 import React from "react";
-import IconButton from "../_ui/IconButton";
-import { Separator } from "../_ui/Separator";
 
 export const Aside = () => {
 

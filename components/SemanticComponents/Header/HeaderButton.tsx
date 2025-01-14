@@ -5,8 +5,8 @@ interface HeaderButtonProps {
 
 export const HeaderButton = ({text}: HeaderButtonProps) => {
   return (
-    <li className="hover:cursor-pointer ital">
-      <p className="text-lg font-extralight uppercase">
+    <li className="hover:cursor-pointer">
+      <p className="text-lg uppercase">
         {text}
       </p>
     </li>
