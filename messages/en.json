@@ -8,5 +8,8 @@
       "forum": "Forum",
       "contact": "Contact"
     }
+  },
+  "SearchBar": {
+    "placeHolder": "Search..."
   }
 }

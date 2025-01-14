@@ -8,5 +8,8 @@
       "forum": "Fórum",
       "contact": "Contato"
     }
+  },
+  "SearchBar": {
+    "placeHolder": "Pesquise..."
   }
 }
