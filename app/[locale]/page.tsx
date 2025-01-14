@@ -1,26 +1,17 @@
 'use client'
 
-import { Header } from "@/components/Header";
+import { Footer } from "@/components/Footer/Footer";
+import { Header } from "@/components/Header/Header";
+import { Main } from "@/components/Main/Main";
 import { useTheme } from "@/hooks/useTheme";
-import {Link} from '@/i18n/routing';
 
 export default function Home() {
   const { theme, toggleTheme } = useTheme();
   return (
-    <div>
+    <div className="divide-y divide-border flex flex-col min-h-screen">
       <Header />
-      <main>
-      <div>
-        <p>O tema atual é: {theme}</p>
-        <button onClick={toggleTheme}>Alternar Tema</button>
-        <Link href='/' locale='en'>Ingles</Link>
-        <Link href='/' locale='pt'>Portugues</Link>
-      </div>
-        
-      </main>
-      <footer>
-        
-      </footer>
+      <Main />
+      <Footer />
     </div>
   );
 }
