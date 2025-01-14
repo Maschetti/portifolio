@@ -3,6 +3,7 @@ import { HeaderButton } from "./HeaderButton";
 import SearchBar from "./SearchBar";
 import { ThemeSwitcher } from "./ThemeSwitcher";
 import { LanguageSwitcher } from "./LanguageSwitcher";
+import { Separator } from "../_ui/Separator";
 
 export const Header = () => {
   const t = useTranslations('Header'); 
@@ -25,7 +26,9 @@ export const Header = () => {
         <li>
           <SearchBar onSearch={() => {}} />
         </li>
+        
       </ul>
+      <Separator noSpacingStart/>
     </header>
   );
 };
