@@ -12,7 +12,7 @@ export const Aside = () => {
         <p className="italic">I am Mateus, a Computer Science Student at PUC Minas. I created this site to use as a portifolio for my work and experiences</p>
       </div>
 
-      <Separator />
+      <Separator gradient />
 
       <div className="flex flex-row justify-evenly  ">
         <IconButton>
