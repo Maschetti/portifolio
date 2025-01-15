@@ -38,7 +38,7 @@ export default async function RootLayout({
         className={`${jetBrains.variable} antialiased`}
       >
         <NextIntlClientProvider messages={messages}>
-          <div className="max-w-screen-xl mx-auto">
+          <div className="max-w-screen-xl w-full mx-auto">
             {children}
           </div>
         </NextIntlClientProvider>
