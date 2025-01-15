@@ -42,3 +42,12 @@ body {
   font-family: var(--font-jetBrains-mono);
   font-weight: 200;
 }
+
+* {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+*::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, and Opera */
+}
