@@ -1,3 +1,4 @@
+import { TextInput } from '@/components/_ui/TextInput';
 import { Search } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 import React, { useState } from 'react';
@@ -22,13 +23,7 @@ const SearchBar: React.FC<SearchBarProps> = ({ onSearch }) => {
 
   return (
     <form onSubmit={handleSearch} className="flex items-center p-2 border border-border rounded-sm max-w-sm">
-      <input
-        type="text"
-        value={query}
-        onChange={handleInputChange}
-        placeholder={placeHolder}
-        className="p-1 text-lg max-w-40 bg-transparent text-text border-none focus:outline-none"
-      />
+      <TextInput value={query} onChange={handleInputChange} placeholder={placeHolder}/>
       
       <Search strokeWidth={1.2}/>
     </form>
