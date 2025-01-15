@@ -5,7 +5,11 @@ import { ThemeSwitcher } from "./ThemeSwitcher";
 import { LanguageSwitcher } from "./LanguageSwitcher";
 import { Separator } from "../../_ui/Separator";
 
-export const Header = () => {
+type HeaderProps = {
+  setSection: (number: string) => void;
+}
+
+export const Header = ({setSection}: HeaderProps) => {
   const t = useTranslations('Header'); 
 
   const navKeys = t.raw('navKeys') as string[];
@@ -15,7 +19,7 @@ export const Header = () => {
     <header className="sticky z-10 top-0">
       <ul className="flex flex-row justify-evenly items-center py-4 bg-background">
         {navItems.map((item, index) => (
-          <HeaderButton key={index} text={item}></HeaderButton>
+          <HeaderButton key={index} text={item} navKey={navKeys[index]} onClick={setSection} ></HeaderButton>
         ))}
         <li>
           <ThemeSwitcher />
