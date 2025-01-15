@@ -1,5 +1,4 @@
 "use client"
-import { useLocale, useTranslations } from 'next-intl';
 import { useState, useEffect } from 'react'
 
 const SECTION_KEY = "app-section"
@@ -11,7 +10,6 @@ export const useSection = () => {
   });
 
   useEffect(() => {
-    document.documentElement.className = section;
     localStorage.setItem(SECTION_KEY, section);
   }, [section]);
 
