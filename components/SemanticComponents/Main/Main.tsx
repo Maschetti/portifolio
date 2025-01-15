@@ -4,22 +4,25 @@ import { About } from "../Sections/About";
 import { Contact } from "../Sections/Contact/Contact";
 import { Projects } from "../Sections/Projects";
 import { Section } from "../Sections/Section";
+import { Working } from "@/components/_ui/Working";
+import { useTheme } from "@/hooks/useTheme";
 
 type MainProps = {
   section: string;
 }
 
 export const Main = ({section}: MainProps) => {
-
+  const theme = useTheme();
   const t = useTranslations('Header.nav'); // Use a chave base]
   const title = t(section) || section.toUpperCase();
 
   return (
     <main className="flex flex-row flex-1 px-10">
       <Section title={title.toUpperCase()}>
-        {(section === "home") && <Projects />}
-        {(section === "project") && <Projects />}
+        {(section === "home") && <Working />}
+        {(section === "projects") && <Projects />}
         {(section === "about") && <About />}
+        {(section === "forum") && <Working />}
         {(section === "contact") && <Contact />}
       </Section>
       <Aside />
