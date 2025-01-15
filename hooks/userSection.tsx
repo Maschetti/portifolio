@@ -4,13 +4,15 @@ import { useState, useEffect } from 'react'
 const SECTION_KEY = "app-section"
 
 export const useSection = () => {
-  const [section, setSection] = useState<string>(() => {
+  const [section, setSection] = useState('home');
+  (() => {
     const  savedSection = localStorage.getItem(SECTION_KEY);
-    return savedSection || 'HOME';
+    return savedSection || 'home';
   });
 
   useEffect(() => {
-    localStorage.setItem(SECTION_KEY, section);
+    const  savedSection = localStorage.getItem(SECTION_KEY) as string || null;
+    if(savedSection) setSection(savedSection);
   }, [section]);
 
   const changeSection = (section: string) => {
