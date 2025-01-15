@@ -1,5 +1,3 @@
-import { LucideIcon } from "lucide-react";
-
 type IconProps = {
   children?: React.ReactNode | string;
   size?: number;
