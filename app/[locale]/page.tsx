@@ -8,7 +8,7 @@ import { useSection } from "@/hooks/userSection";
 import { useTheme } from "@/hooks/useTheme";
 
 export default function Home() {
-  const theme = useTheme();
+  const {theme} = useTheme();
   
   const {section, changeSection} = useSection();
   return (
