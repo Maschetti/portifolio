@@ -8,11 +8,11 @@ import { useSection } from "@/hooks/userSection";
 import { useTheme } from "@/hooks/useTheme";
 
 export default function Home() {
-  useTheme();
+  const theme = useTheme();
   
   const {section, changeSection} = useSection();
   return (
-    <div className="flex flex-col min-h-screen">
+    <div className={`flex flex-col min-h-screen ${theme}`}>
       <Header setSection={changeSection}/>
       <Main section={section}/>
       <Separator noSpacingEnd noSpacingStart/>
