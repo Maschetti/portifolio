@@ -6,10 +6,6 @@ const withNextIntl = createNextIntlPlugin();
 const nextConfig: NextConfig = {
   output: 'export',
   distDir: 'build',
-  i18n: {
-    locales: ['en', 'pt'],
-    defaultLocale: 'en',
-  },
   exportPathMap: async function () {
     return {
       '/en': { page: '/[locale]', query: { locale: 'en' } },
