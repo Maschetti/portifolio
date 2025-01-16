@@ -1,3 +1,4 @@
+"use client"
 import { ProjectCard } from "@/components/_ui/ProjectCard"
 
 export const Projects = () => {
