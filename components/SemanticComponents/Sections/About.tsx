@@ -15,7 +15,7 @@ export const About = () => {
 
       <div className='w-full flex justify-center'>
         <Image  
-          src={'/images/pic2.png'}
+          src={'./images/pic2.png'}
           alt="Print do aplicativo"
           width={900}
           height={1600}
