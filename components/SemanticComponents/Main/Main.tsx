@@ -1,3 +1,4 @@
+"use client"
 import { useTranslations } from "next-intl";
 import { Aside } from "../Aside/Aside";
 import { About } from "../Sections/About";

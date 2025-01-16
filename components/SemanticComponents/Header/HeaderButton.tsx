@@ -1,4 +1,4 @@
-
+"use client"
 interface HeaderButtonProps {
   text: string;
   onClick: (section: string) => void;

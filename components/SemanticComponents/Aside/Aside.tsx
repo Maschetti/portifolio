@@ -1,3 +1,5 @@
+"use client"
+
 import IconButton from "@/components/_ui/IconButton";
 import { Separator } from "@/components/_ui/Separator";
 import { FileUser, Github, Linkedin, Mail } from "lucide-react";

@@ -1,3 +1,4 @@
+"use client"
 type ContactLinkProps = {
   link: string;
   href: string;

@@ -1,3 +1,4 @@
+"use client"
 import { useTranslations } from "next-intl";
 import { HeaderButton } from "./HeaderButton";
 import SearchBar from "./SearchBar";
