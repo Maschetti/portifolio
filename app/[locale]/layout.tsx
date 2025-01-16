@@ -19,13 +19,16 @@ export const metadata: Metadata = {
 };
 
 type Locale = 'en' | 'pt'
+interface Params {
+  locale: Locale;
+}
 
 export default async function RootLayout({
   children,
   params
 }:{
   children: React.ReactNode;
-  params: {locale: Locale};
+  params: Params;
 }) {
   const {locale} = params;
 
