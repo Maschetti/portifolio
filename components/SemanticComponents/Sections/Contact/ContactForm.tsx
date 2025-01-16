@@ -1,3 +1,5 @@
+"use client"
+
 import { TextInput } from '@/components/_ui/TextInput';
 import { useState } from 'react';
 

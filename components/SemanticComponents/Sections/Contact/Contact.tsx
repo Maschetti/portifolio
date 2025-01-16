@@ -1,3 +1,4 @@
+"use client"
 import { Separator } from "@/components/_ui/Separator";
 import { ContactLink } from "./ContactLink";
 import ContactForm from "./ContactForm";

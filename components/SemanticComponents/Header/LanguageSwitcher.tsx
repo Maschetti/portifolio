@@ -1,3 +1,4 @@
+"use client"
 import { useLocale } from "next-intl";
 import {Link} from '@/i18n/routing';
 import IconButton from "../../_ui/IconButton";
