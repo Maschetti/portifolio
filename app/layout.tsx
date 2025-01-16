@@ -4,6 +4,14 @@ import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import React from 'react';
 
+export async function generateStaticParams() {
+  const locales = ['en', 'pt']; // Liste aqui todos os locais suportados
+
+  return locales.map((locale) => ({
+    locale, // Gera um parâmetro para cada local
+  }));
+}
+
 export const metadata: Metadata = {
   title: "Mateus Viana",
   description: "Portifolio",
