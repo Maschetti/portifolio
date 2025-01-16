@@ -1,3 +1,4 @@
+"use client"
 import { Separator } from "@/components/_ui/Separator";
 import { Footer } from "@/components/SemanticComponents/Footer/Footer";
 import { Header } from "@/components/SemanticComponents/Header/Header";
