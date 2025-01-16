@@ -27,17 +27,16 @@ export default async function RootLayout({
   children: React.ReactNode;
   params: {locale: Locale};
 }) {
-  const p = await params;
-  const loc = await p.locale;
+  const {locale} = params;
 
-  if (!routing.locales.includes(loc)) {
+  if (!routing.locales.includes(locale)) {
     notFound();
   }
 
   const messages = await getMessages();
 
   return (
-    <html lang={loc}>
+    <html lang={locale}>
       <body
         className={`${jetBrains.variable} antialiased`}
       >
