@@ -28,7 +28,7 @@ export default async function RootLayout({
   params: {locale: Locale};
 }) {
 
-  if (!routing.locales.includes(locale)) {
+  if (!routing.locales.includes(locale as any)) {
     notFound();
   }
 
