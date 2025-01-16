@@ -5,7 +5,6 @@ import SearchBar from "./SearchBar";
 import { ThemeSwitcher } from "./ThemeSwitcher";
 import { LanguageSwitcher } from "./LanguageSwitcher";
 import { Separator } from "../../_ui/Separator";
-import { useSection } from "@/hooks/userSection";
 
 type HeaderProps = {
   onClick: (section: string) => void;
