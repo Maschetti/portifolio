@@ -1,10 +1,11 @@
+"use client"
 import Image from 'next/image';
 
 export const About = () => {
   return (
     <div className="flex flex-col gap-4 p-4 max-w-screen-xl mx-auto">
       <p>
-        Hello, I'm Mateus Viana, a Computer Science student. Welcome to my portifolio, where I share a bit of my
+        Hello, I&apos;m Mateus Viana, a Computer Science student. Welcome to my portifolio, where I share a bit of my
         projects and past experiences.
       </p>
       <p>

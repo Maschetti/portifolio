@@ -1,3 +1,4 @@
+"use client"
 import { useTranslations } from "next-intl";
 import { Aside } from "../Aside/Aside";
 import { About } from "../Sections/About";
@@ -5,14 +6,10 @@ import { Contact } from "../Sections/Contact/Contact";
 import { Projects } from "../Sections/Projects";
 import { Section } from "../Sections/Section";
 import { Working } from "@/components/_ui/Working";
-import { useTheme } from "@/hooks/useTheme";
+import { useSection } from "@/hooks/userSection";
 
-type MainProps = {
-  section: string;
-}
-
-export const Main = ({section}: MainProps) => {
-  const theme = useTheme();
+export const Main = () => {
+  const {section} = useSection();
   const t = useTranslations('Header.nav'); // Use a chave base]
   const title = t(section) || section.toUpperCase();
 

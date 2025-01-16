@@ -11,7 +11,7 @@ type TextInputProps = {
 export const TextInput = ({value, onChange, placeholder, id, border=false, type='text'}: TextInputProps) => {
   return (
     <input
-      type="text"
+      type={type}
       id={id}
       value={value}
       onChange={onChange}

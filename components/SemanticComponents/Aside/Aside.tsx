@@ -1,3 +1,5 @@
+"use client"
+
 import IconButton from "@/components/_ui/IconButton";
 import { Separator } from "@/components/_ui/Separator";
 import { FileUser, Github, Linkedin, Mail } from "lucide-react";
@@ -14,7 +16,7 @@ export const Aside = () => {
 
       <Separator gradient />
 
-      <div className="flex flex-row justify-evenly  ">
+      <div className="flex flex-row justify-evenly">
         <IconButton>
           <Mail />
         </IconButton>
