@@ -14,41 +14,23 @@ const jetBrains = JetBrains_Mono({
   style: ["normal", "italic"],
 });
 
-export const metadata: Metadata = {
-  title: "Mateus Viana",
-  description: "Portifolio",
-};
+export default async function LocaleLayout({
+  children,
+}:{
+  children: React.ReactNode;
+}) {
 
-type Locale = 'en' | 'pt';
-type Params = {locale: Locale};
-
-export async function generateStaticParams() {
-  const locales = ['en', 'pt']; // Liste aqui todos os locais suportados
-  return locales.map((locale) => ({
-    locale, // Gera um parâmetro para cada local
-  }));
-}
-
-export default async function LocaleLayout({ children, params }: { children: React.ReactNode, params: Promise<Params>; }) {
-  const {locale} = (await params);
-  
-  if (!routing.locales.includes(locale as any)) {
-    notFound();
-  }
-  
   const messages = await getMessages();
 
   return (
-    <html lang={locale}>
-      <body
-        className={`${jetBrains.variable} antialiased`}
-      >
-        <NextIntlClientProvider messages={messages}>
-          <div className="max-w-screen-xl w-full mx-auto">
-            {children}
-          </div>
-        </NextIntlClientProvider>
-      </body>
-    </html>
+    <body
+      className={`${jetBrains.variable} antialiased`}
+    >
+      <NextIntlClientProvider messages={messages}>
+        <div className="max-w-screen-xl w-full mx-auto">
+          {children}
+        </div>
+      </NextIntlClientProvider>
+    </body>
   );
 }
