@@ -6,12 +6,6 @@ const withNextIntl = createNextIntlPlugin();
 const nextConfig: NextConfig = {
   output: 'export',
   distDir: 'build',
-  exportPathMap: async function () {
-    return {
-      '/en': { page: '/[locale]', query: { locale: 'en' } },
-      '/pt': { page: '/[locale]', query: { locale: 'pt' } },
-    };
-  },
   /* config options here */
   eslint: {
     ignoreDuringBuilds: true,
