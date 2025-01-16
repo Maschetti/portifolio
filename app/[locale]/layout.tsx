@@ -19,18 +19,14 @@ export const metadata: Metadata = {
 };
 
 type Locale = 'en' | 'pt'
-interface Params {
-  locale: Locale;
-}
 
 export default async function RootLayout({
   children,
-  params
+  params: {locale}
 }:{
   children: React.ReactNode;
-  params: Params;
+  params: {locale: Locale};
 }) {
-  const {locale} = params;
 
   if (!routing.locales.includes(locale)) {
     notFound();
