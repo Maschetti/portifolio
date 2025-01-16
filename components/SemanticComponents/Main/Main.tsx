@@ -6,12 +6,10 @@ import { Contact } from "../Sections/Contact/Contact";
 import { Projects } from "../Sections/Projects";
 import { Section } from "../Sections/Section";
 import { Working } from "@/components/_ui/Working";
+import { useSection } from "@/hooks/userSection";
 
-type MainProps = {
-  section: string;
-}
-
-export const Main = ({section}: MainProps) => {
+export const Main = () => {
+  const {section} = useSection();
   const t = useTranslations('Header.nav'); // Use a chave base]
   const title = t(section) || section.toUpperCase();
 
