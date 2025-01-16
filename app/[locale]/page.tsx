@@ -4,7 +4,6 @@ import { Footer } from "@/components/SemanticComponents/Footer/Footer";
 import { Header } from "@/components/SemanticComponents/Header/Header";
 import { Main } from "@/components/SemanticComponents/Main/Main";
 import { useSection } from "@/hooks/userSection";
-import { useTheme } from "@/hooks/useTheme";
 
 export async function generateStaticParams() {
   const locales = ['en', 'pt']; // Liste aqui todos os locais suportados
@@ -15,11 +14,10 @@ export async function generateStaticParams() {
 }
 
 export default function Home() {
-  const {theme} = useTheme();
   
   const {section, changeSection} = useSection();
   return (
-    <div className={`flex flex-col min-h-screen ${theme}`}>
+    <div className='flex flex-col min-h-screen'>
       <Header setSection={changeSection}/>
       <Main section={section}/>
       <Separator noSpacingEnd noSpacingStart/>

@@ -5,6 +5,7 @@ import { routing } from "@/i18n/routing";
 import { notFound } from "next/navigation";
 import { getMessages } from "next-intl/server";
 import { NextIntlClientProvider } from "next-intl";
+import { useTheme } from "@/hooks/useTheme";
 
 const jetBrains = JetBrains_Mono({
   subsets: ["latin"],
@@ -36,11 +37,12 @@ export default async function RootLayout({
   }
 
   const messages = await getMessages();
+  const {theme} = useTheme();
 
   return (
     <html lang={locale}>
       <body
-        className={`${jetBrains.variable} antialiased`}
+        className={`${jetBrains.variable, theme} antialiased`}
       >
         <NextIntlClientProvider messages={messages}>
           <div className="max-w-screen-xl w-full mx-auto">
