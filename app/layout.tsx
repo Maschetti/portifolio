@@ -1,5 +1,6 @@
+'use client'
 import { useTheme } from '../hooks/useTheme';
-import { routing, routing } from '../i18n/routing';
+import { routing } from '../i18n/routing';
 import { Metadata } from 'next';
 import { notFound, useRouter } from 'next/navigation';
 import React from 'react';
