@@ -7,19 +7,21 @@ import { LanguageSwitcher } from "./LanguageSwitcher";
 import { Separator } from "../../_ui/Separator";
 import { useSection } from "@/hooks/userSection";
 
-export const Header = () => {
+type HeaderProps = {
+  onClick: (section: string) => void;
+}
+
+export const Header = ({onClick}: HeaderProps) => {
   const t = useTranslations('Header'); 
 
   const navKeys = t.raw('navKeys') as string[];
   const navItems = navKeys.map((key) => t(`nav.${key}`));
-
-  const {changeSection} = useSection();
   
   return (
     <header className="sticky z-10 top-0">
       <ul className="flex flex-row justify-evenly items-center py-4 bg-background">
         {navItems.map((item, index) => (
-          <HeaderButton key={index} text={item} navKey={navKeys[index]} onClick={changeSection} ></HeaderButton>
+          <HeaderButton key={index} text={item} navKey={navKeys[index]} onClick={onClick} ></HeaderButton>
         ))}
         <li>
           <ThemeSwitcher />
