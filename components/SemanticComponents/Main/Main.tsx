@@ -5,7 +5,6 @@ import { Contact } from "../Sections/Contact/Contact";
 import { Projects } from "../Sections/Projects";
 import { Section } from "../Sections/Section";
 import { Working } from "@/components/_ui/Working";
-import { useTheme } from "@/hooks/useTheme";
 
 type MainProps = {
   section: string;
