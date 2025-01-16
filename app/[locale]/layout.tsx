@@ -34,7 +34,7 @@ export default async function RootLayout(
     children
   } = props;
 
-  if (!routing.locales.includes(locale as any)) {
+  if (!routing.locales.includes(locale as 'en' | 'pt')) {
     notFound();
   }
 

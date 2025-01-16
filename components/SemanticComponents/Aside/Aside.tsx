@@ -14,7 +14,7 @@ export const Aside = () => {
 
       <Separator gradient />
 
-      <div className="flex flex-row justify-evenly  ">
+      <div className="flex flex-row justify-evenly">
         <IconButton>
           <Mail />
         </IconButton>

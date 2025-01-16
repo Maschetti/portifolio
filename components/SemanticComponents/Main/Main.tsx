@@ -12,7 +12,6 @@ type MainProps = {
 }
 
 export const Main = ({section}: MainProps) => {
-  const theme = useTheme();
   const t = useTranslations('Header.nav'); // Use a chave base]
   const title = t(section) || section.toUpperCase();
 
