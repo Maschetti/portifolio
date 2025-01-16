@@ -18,15 +18,18 @@ export const metadata: Metadata = {
   description: "Portifolio",
 };
 
-type Locale = 'en' | 'pt'
+type Locale = 'en' | 'pt';
+
+type Params = {locale: Locale};
 
 export default async function RootLayout({
   children,
-  params: {locale}
+  params
 }:{
   children: React.ReactNode;
-  params: {locale: Locale};
+  params: Promise<Params>;
 }) {
+  const {locale} = (await params);
 
   if (!routing.locales.includes(locale as any)) {
     notFound();
