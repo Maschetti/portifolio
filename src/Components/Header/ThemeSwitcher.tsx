@@ -1,15 +1,11 @@
-// import { useTheme } from "@/hooks/useTheme";
+import IconButton from "./../_ui/IconButton";
 import { Moon, Sun } from "lucide-react";
-import { use } from "react";
-import IconButton from "../../_ui/IconButton";
 
 export const ThemeSwitcher = () => {
   // const {theme, toggleTheme} = useTheme();
-  const theme = use;
+  const theme = 'dark';
   return (
-    <button
-      onClick={toggleTheme}
-    >
+    <button>
       {theme === 'dark' ? <IconButton><Sun /></IconButton> : <IconButton><Moon /></IconButton>}
     </button>
   )
