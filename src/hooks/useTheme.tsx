@@ -17,7 +17,9 @@ export const useTheme = () => {
 
   useEffect(() => {
     if (theme) {
-      document.documentElement.className = theme;
+      console.log(theme);
+      document.documentElement.classList.remove('light', 'dark');
+      document.documentElement.classList.add(theme);
       localStorage.setItem(THEME_KEY, theme);
     }
   }, [theme]);
