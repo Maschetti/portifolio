@@ -1,4 +1,4 @@
-import IconButton from "../_ui/IconButton";
+import IconButton from "./../_ui/IconButton";
 import { Moon, Sun } from "lucide-react";
 
 export const ThemeSwitcher = () => {

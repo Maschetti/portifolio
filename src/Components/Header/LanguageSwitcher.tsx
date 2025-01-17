@@ -1,5 +1,5 @@
 import { Languages } from "lucide-react";
-import IconButton from "../_ui/IconButton";
+import IconButton from "./../_ui/IconButton";
 
 
 export const LanguageSwitcher = () => {

@@ -1,5 +1,5 @@
-import SearchBar from "../_ui/SearchBar";
-import { Separator } from "../_ui/Separator";
+import SearchBar from "./../_ui/SearchBar";
+import { Separator } from "./../_ui/Separator";
 import { HeaderButton } from "./HeaderButton";
 import { LanguageSwitcher } from "./LanguageSwitcher";
 import { ThemeSwitcher } from "./ThemeSwitcher";
