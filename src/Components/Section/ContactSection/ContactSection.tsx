@@ -5,7 +5,7 @@ import { Separator } from "@/Components/_ui/Separator";
 export const ContactSection = () => {
 
   return (
-    <div className="p-4">
+    <div className="p-4 w-full">
       <p className="pb-2">Feel free to reach out to me through the following methods:</p>
 
       <div className="flex flex-col gap-2 max-w-2xl mx-auto">

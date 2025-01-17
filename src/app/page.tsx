@@ -1,3 +1,5 @@
+import { Separator } from "@/Components/_ui/Separator";
+import { Footer } from "@/Components/Footer/Footer";
 import { Header } from "@/Components/Header/Header";
 import { Main } from "@/Components/Main/Main";
 import { SectionProvider } from "@/hooks/SectionContext";
@@ -10,9 +12,8 @@ export default function Home() {
         <Main />
       </SectionProvider>
 
-      <footer >
-
-      </footer>
+      <Separator noSpacingEnd noSpacingStart />
+      <Footer />
     </div>
   );
 }
