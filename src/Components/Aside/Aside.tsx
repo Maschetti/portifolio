@@ -5,7 +5,32 @@ import { Separator } from "../_ui/Separator";
 export const Aside = () => {
 
   return (
-    <aside className="max-w-xs flex flex-col sticky top-32 z-10 self-start">
+    <aside
+      className="
+        flex-col
+        sticky
+        top-32
+        z-10 
+        self-start
+
+        transition-all
+        duration-200
+        ease-in-out
+
+        text-sm
+        max-w-44
+
+        hidden
+
+        md:flex
+        md:max-w-64
+        md:text-base
+
+
+        lg:text-lg
+        lg:max-w-xs
+      "
+    >
       <div className="text-pretty">
         <h1>Welcome</h1>
         <p className="italic">I am Mateus, a Computer Science Student at PUC Minas. I created this site to use as a portifolio for my work and experiences</p>

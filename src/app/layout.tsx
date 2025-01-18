@@ -24,7 +24,7 @@ export default function RootLayout({
       <body
         className={`${jetBrains.variable} antialiased`}
       >
-        <div className="max-w-screen-lg w-full mx-auto">
+        <div className="max-w-screen-xl w-full mx-auto">
           {children}
         </div>
       </body>

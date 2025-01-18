@@ -3,7 +3,7 @@ import { Section } from "./../Section/Section";
 export const Main = () => {
 
   return (
-    <main className="flex flex-row flex-1 px-10 w-full">
+    <main className="flex flex-row flex-1 px-2 w-full">
       <Section />
       <Aside />
     </main>

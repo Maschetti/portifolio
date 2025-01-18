@@ -11,8 +11,17 @@ export const Section = () => {
   const { section } = useSection();
 
   return (
-    <section className="p-6 flex-1">
-      <h1 className="text-secondary text-5xl italic">{section.toUpperCase()}</h1>
+    <section
+      className="
+        flex-1 
+        py-4 
+        sm:py-6 
+        transition-all
+        duration-200
+        ease-in-out
+      "
+    >
+      <h1 className="text-secondary text-5xl italic ">{section.toUpperCase()}</h1>
       {section === 'home' && <HomeSection />}
       {section === 'sobre' && <AboutSection />}
       {section === 'projetos' && <ProjectsSection />}
