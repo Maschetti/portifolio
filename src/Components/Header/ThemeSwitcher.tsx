@@ -1,12 +1,16 @@
 "use client"
 import { useTheme } from "@/hooks/useTheme";
-import IconButton from "./../_ui/IconButton";
 import { Moon, Sun } from "lucide-react";
+import IconButton from "./../_ui/IconButton";
 
-export const ThemeSwitcher = () => {
+type ThemeSwitcherProps = {
+  tooltip?: string;
+};
+
+export const ThemeSwitcher = ({ tooltip }: ThemeSwitcherProps) => {
   const { theme, toggleTheme } = useTheme();
   return (
-    <button onClick={toggleTheme} title="Change Theme">
+    <button onClick={toggleTheme} title={tooltip}>
       {theme === 'dark' ? <IconButton><Sun /></IconButton > : <IconButton><Moon /></IconButton>}
     </button>
   )

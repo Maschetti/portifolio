@@ -1,5 +1,6 @@
 'use client'
 
+import { useLanguage } from "@/hooks/LanguageContext";
 import { useSection } from "@/hooks/SectionContext";
 import { Working } from "../_ui/Working";
 import { AboutSection } from "./AboutSection";
@@ -9,6 +10,8 @@ import { ProjectsSection } from "./ProjectsSection";
 
 export const Section = () => {
   const { section } = useSection();
+  const { getMessages } = useLanguage();
+  const messages = getMessages('header');
 
   return (
     <section
@@ -21,12 +24,12 @@ export const Section = () => {
         ease-in-out
       "
     >
-      <h1 className="text-secondary text-3xl sm:text-5xl italic ">{section.toUpperCase()}</h1>
+      <h1 className="text-secondary text-3xl sm:text-5xl italic ">{messages[section].toUpperCase()}</h1>
       {section === 'home' && <HomeSection />}
-      {section === 'sobre' && <AboutSection />}
-      {section === 'projetos' && <ProjectsSection />}
-      {section == 'fórum' && <Working />}
-      {section === 'contato' && <ContactSection />}
+      {section === 'about' && <AboutSection />}
+      {section === 'projects' && <ProjectsSection />}
+      {section == 'forum' && <Working />}
+      {section === 'contact' && <ContactSection />}
     </section>
   )
 };

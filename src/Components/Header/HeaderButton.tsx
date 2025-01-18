@@ -4,14 +4,15 @@ import { useSection } from "@/hooks/SectionContext";
 
 type HeaderButtonProps = {
   text: string;
+  navItem: string;
 }
 
-export const HeaderButton = ({ text }: HeaderButtonProps) => {
+export const HeaderButton = ({ text, navItem }: HeaderButtonProps) => {
   const { changeSection } = useSection();
   return (
     <li
       className="hover:cursor-pointer"
-      onClick={() => changeSection(text.toLowerCase())}
+      onClick={() => changeSection(navItem.toLowerCase())}
     >
       <p
         className="

@@ -1,13 +1,18 @@
 import { Languages } from "lucide-react";
 import IconButton from "./../_ui/IconButton";
 
+type LanguageSwitcherProps = {
+  changeLanguage: () => void;
+  tooltip?: string;
+};
 
-export const LanguageSwitcher = () => {
+export const LanguageSwitcher = ({ changeLanguage, tooltip }: LanguageSwitcherProps) => {
 
   return (
     <div
       className="hover:cursor-pointer"
-      title="Change Language"
+      title={tooltip}
+      onClick={changeLanguage}
     >
       <IconButton>
         <Languages />
