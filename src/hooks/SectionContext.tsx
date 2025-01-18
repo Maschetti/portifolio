@@ -1,5 +1,5 @@
 'use client'
-import { createContext, useContext, useState, ReactNode, useEffect } from 'react';
+import { createContext, ReactNode, useContext, useEffect, useState } from 'react';
 
 // Define the type for the context props
 type SectionContextProps = {
@@ -15,7 +15,7 @@ type SectionProviderProps = {
   children: ReactNode;
 }
 
-const SECTION_KEY = 'section-theme';
+const SECTION_KEY = 'app-section';
 
 export const SectionProvider: React.FC<SectionProviderProps> = ({ children }) => {
   const [section, setSection] = useState<string>('home'); // Default initial value
