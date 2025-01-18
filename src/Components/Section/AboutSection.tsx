@@ -15,7 +15,7 @@ export const AboutSection = () => {
 
       <div className='max-w-xs md:max-w-sm lg:max-w-md mx-auto'>
         <Image
-          layout='responsive'
+          layout='intrinsic'
           src={`${basePath}images/pic2.png`}
           alt="Print do aplicativo"
           width={900}

@@ -25,11 +25,7 @@ const ContactForm = () => {
         flex
         flex-col
         gap-4
-        max-w-sm
-        sm:max-w-md
-        md:max-w-md
-        lg:max-w-lg
-        xl:max-w-xl
+        max-w-2xl
       "
     >
 
