@@ -1,6 +1,6 @@
+import { Separator } from "@/Components/_ui/Separator";
 import ContactForm from "./ContactForm";
 import { ContactLink } from "./ContactLink";
-import { Separator } from "@/Components/_ui/Separator";
 
 export const ContactSection = () => {
 
@@ -17,7 +17,7 @@ export const ContactSection = () => {
         <ContactLink
           label="Linkedin"
           href="https://www.linkedin.com/in/mateus-viana-maschietto/"
-          link="https://www.linkedin.com/in/mateus-viana-maschietto/"
+          link="https://www.linkedin"
         />
         <ContactLink
           label="Mobile"

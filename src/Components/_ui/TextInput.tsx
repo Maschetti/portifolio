@@ -8,7 +8,7 @@ type TextInputProps = {
   type?: 'email' | 'text';
 }
 
-export const TextInput = ({value, onChange, placeholder, id, border=false, type='text'}: TextInputProps) => {
+export const TextInput = ({ value, onChange, placeholder, id, border = false, type = 'text' }: TextInputProps) => {
   return (
     <input
       type={type}
@@ -17,7 +17,8 @@ export const TextInput = ({value, onChange, placeholder, id, border=false, type=
       onChange={onChange}
       placeholder={placeholder}
       className={`
-        text-lg
+        text-sm
+        sm:text-lg
         bg-transparent
         text-text
         focus:outline-none

@@ -16,10 +16,25 @@ const ContactForm = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="max-w-2xl mx-auto rounded-lg flex flex-col gap-4">
+    <form
+      onSubmit={handleSubmit}
+      className="
+        w-full
+        mx-auto
+        rounded-lg
+        flex
+        flex-col
+        gap-4
+        max-w-sm
+        sm:max-w-md
+        md:max-w-md
+        lg:max-w-lg
+        xl:max-w-xl
+      "
+    >
 
       <div>
-        <label htmlFor="name" className="block text-sm font-medium text-gray-700">Nome</label>
+        <label htmlFor="name" className="block text-sm font-medium">Nome</label>
         <TextInput
           id='name'
           value={name}
@@ -31,7 +46,7 @@ const ContactForm = () => {
       </div>
 
       <div>
-        <label htmlFor="email" className="block text-sm font-medium text-gray-700">E-mail</label>
+        <label htmlFor="email" className="block text-sm font-medium">E-mail</label>
         <TextInput
           type='email'
           id='email'
@@ -44,7 +59,7 @@ const ContactForm = () => {
       </div>
 
       <div>
-        <label htmlFor="subject" className="block text-sm font-medium text-gray-700">Assunto</label>
+        <label htmlFor="subject" className="block text-sm font-medium">Assunto</label>
         <TextInput
           id='subject'
           value={subject}
@@ -56,7 +71,7 @@ const ContactForm = () => {
       </div>
 
       <div>
-        <label htmlFor="message" className="block text-sm font-medium text-gray-700">Mensagem</label>
+        <label htmlFor="message" className="block text-sm font-medium">Mensagem</label>
         <textarea
           id="message"
           value={message}
@@ -65,6 +80,9 @@ const ContactForm = () => {
           rows={4}
           placeholder='What is your message?'
           className="
+            text-sm
+            sm:text-lg
+
             block
             w-full
             p-2
@@ -76,8 +94,10 @@ const ContactForm = () => {
             focus:border-transparent
             focus:outline-none
             ring-transparent
-            transition
+            transition-transform
             delay-150
+            ease-linear
+            
           "
         />
       </div>

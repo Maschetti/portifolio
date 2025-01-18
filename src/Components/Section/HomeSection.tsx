@@ -2,12 +2,22 @@ import { basePath } from "@/constants/basePath";
 import { ProjectCard } from "../_ui/ProjectCard";
 import { Separator } from "../_ui/Separator";
 
+type TitleProps = {
+  text: string;
+};
+
+const Title = ({ text }: TitleProps) => {
+  return (
+    <h2 className="text-xl text-secondary sm:text-3xl">{text}</h2>
+  );
+};
+
 export const HomeSection = () => {
   return (
     <div className="p-4 w-full flex flex-col gap-8">
 
       <div className="flex flex-col gap-2">
-        <h2 className="text-3xl text-secondary">Projetos principais...</h2>
+        <Title text='Projetos principais...' />
         <div className="grid grid-cols-1 w-full lg:grid-cols-2">
           {[...Array(2)].map((_, index) => (
             <ProjectCard key={index} src={`${basePath}images/portifolio.png`} />
@@ -18,7 +28,7 @@ export const HomeSection = () => {
       <Separator gradient />
 
       <div className="flex flex-col gap-2">
-        <h2 className="text-3xl text-secondary">Ultimos projetos...</h2>
+        <Title text='Projetos recentes...' />
         <div className="grid grid-cols-1 w-full lg:grid-cols-2">
           {[...Array(4)].map((_, index) => (
             <ProjectCard key={index} src={`${basePath}images/portifolio.png`} />
@@ -26,5 +36,5 @@ export const HomeSection = () => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
