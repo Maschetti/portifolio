@@ -1,3 +1,4 @@
+import { basePath } from '@/constants/basePath';
 import Image from 'next/image';
 
 export const AboutSection = () => {
@@ -12,9 +13,10 @@ export const AboutSection = () => {
         Along the way, I decided to share my experiences to help others who might be going through similar journeys.
       </p>
 
-      <div className='w-full flex justify-center'>
+      <div className='max-w-xs md:max-w-sm lg:max-w-md mx-auto'>
         <Image
-          src={'./images/pic2.png'}
+          layout='responsive'
+          src={`${basePath}images/pic2.png`}
           alt="Print do aplicativo"
           width={900}
           height={1600}

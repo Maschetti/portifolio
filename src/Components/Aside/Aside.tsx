@@ -1,6 +1,7 @@
 import { FileUser, Github, Linkedin, Mail } from "lucide-react";
 import IconButton from "../_ui/IconButton";
 import { Separator } from "../_ui/Separator";
+import { basePath } from "@/constants/basePath";
 
 export const Aside = () => {
 
@@ -71,7 +72,7 @@ export const Aside = () => {
 
         <a
           title="Check my Resume"
-          href="./files/MateusVianaCVC.pdf"
+          href={`${basePath}files/MateusVianaCVC.pdf`}
           download
         >
           <IconButton>
