@@ -14,29 +14,45 @@ export const Aside = () => {
       <Separator gradient />
 
       <div className="flex flex-row justify-evenly">
-        <div title="Send me an email">
+        <a
+          title="Send me an email"
+          href="mailto:mateusvmaschietto@gmail.com"
+          target="_blank"
+        >
           <IconButton>
             <Mail />
           </IconButton>
-        </div>
+        </a>
 
-        <div title="Check my Github">
+        <a
+          title="Check my Github"
+          href="https://github.com/Maschetti"
+          target="_blank"
+        >
           <IconButton>
             <Github />
           </IconButton>
-        </div>
+        </a>
 
-        <div title="Check my Linkedin">
+        <a
+          title="Check my Linkedin"
+          href="https://www.linkedin.com/in/mateus-viana-maschietto"
+          target="_blank"
+        >
           <IconButton>
             <Linkedin />
           </IconButton>
-        </div>
+        </a>
 
-        <div title="Check my Resume">
+        <a
+          title="Check my Resume"
+          href="/files/MateusVianaCVC.pdf"
+          download
+        >
           <IconButton>
             <FileUser />
           </IconButton>
-        </div>
+        </a>
 
       </div>
     </aside>

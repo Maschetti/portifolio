@@ -9,7 +9,7 @@ export const Header = () => {
 
   return (
     <header className="sticky z-10 top-0 w-full background">
-      <ul className="flex flex-row justify-evenly items-center py-4">
+      <ul className="flex flex-row justify-evenly items-center py-4 bg-background">
         {navItems.map((item, index) => (
           <HeaderButton key={index} text={item}></HeaderButton>
         ))}
