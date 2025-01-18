@@ -71,7 +71,7 @@ export const Aside = () => {
 
         <a
           title="Check my Resume"
-          href="/files/MateusVianaCVC.pdf"
+          href="./files/MateusVianaCVC.pdf"
           download
         >
           <IconButton>
