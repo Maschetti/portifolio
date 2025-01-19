@@ -10,8 +10,8 @@ const pt = {
   },
   "homeSection": {
     "title": "início",
-    "fisrt": "Projetos Principais",
-    "subtitle": "Projetos Recentes",
+    "first": "Projetos Principais",
+    "second": "Projetos Recentes",
   },
   "aboutSection": {
     "title": "sobre",

@@ -10,7 +10,7 @@ const en = {
   },
   "homeSection": {
     "title": "home",
-    "fisrt": "Main Projects",
+    "first": "Main Projects",
     "second": "Latest Projects",
   },
   "aboutSection": {
