@@ -1,18 +1,17 @@
-'use client'
-
-import { useLanguage } from "@/hooks/LanguageContext";
-import { useSection } from "@/hooks/SectionContext";
+import { Section as SectionType } from "@/constants/dictionaries/DictionaryType";
 import { Working } from "../_ui/Working";
 import { AboutSection } from "./AboutSection";
 import { ContactSection } from "./ContactSection/ContactSection";
 import { HomeSection } from "./HomeSection";
 import { ProjectsSection } from "./ProjectsSection";
 
-export const Section = () => {
-  const { section } = useSection();
-  const { getMessages } = useLanguage();
-  const messages = getMessages('header');
+type SectionProps = {
+  messages: SectionType,
+  section: string,
+}
 
+export const Section = ({ messages, section }: SectionProps) => {
+  const title = messages.title;
   return (
     <section
       className="
@@ -24,12 +23,12 @@ export const Section = () => {
         ease-in-out
       "
     >
-      <h1 className="text-secondary text-3xl sm:text-5xl italic ">{messages[section].toUpperCase()}</h1>
-      {section === 'home' && <HomeSection />}
-      {section === 'about' && <AboutSection />}
+      <h1 className="text-secondary text-3xl sm:text-5xl italic ">{title.toUpperCase()}</h1>
+      {section === 'home' && <HomeSection messages={messages} />}
+      {section === 'about' && <AboutSection messages={messages} />}
       {section === 'projects' && <ProjectsSection />}
       {section == 'forum' && <Working />}
-      {section === 'contact' && <ContactSection />}
+      {section === 'contact' && <ContactSection messages={messages} />}
     </section>
   )
 };

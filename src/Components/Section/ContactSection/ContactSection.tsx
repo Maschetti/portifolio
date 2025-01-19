@@ -1,12 +1,17 @@
 import { Separator } from "@/Components/_ui/Separator";
+import { Section } from "@/constants/dictionaries/DictionaryType";
 import ContactForm from "./ContactForm";
 import { ContactLink } from "./ContactLink";
 
-export const ContactSection = () => {
+type ContactSectionProps = {
+  messages: Section
+};
+
+export const ContactSection = ({ messages }: ContactSectionProps) => {
 
   return (
     <div className="p-4 w-full">
-      <p className="pb-2">Feel free to reach out to me through the following methods:</p>
+      <p className="pb-2">{messages.first}</p>
 
       <div className="flex flex-col gap-2 max-w-2xl mx-auto">
         <ContactLink
@@ -17,18 +22,18 @@ export const ContactSection = () => {
         <ContactLink
           label="Linkedin"
           href="https://www.linkedin.com/in/mateus-viana-maschietto/"
-          link="https://www.linkedin"
+          link="https://www.linkedin.com/in/mateus-viana-maschietto/"
         />
         <ContactLink
-          label="Mobile"
+          label={messages['mobile']}
           href="tel:31985470266"
           link="(31)985470266"
         />
       </div>
 
-      <Separator gradient>OR</Separator>
+      <Separator gradient>{messages.or}</Separator>
 
-      <p className="pb-4">You can use the contact form below:</p>
+      <p className="pb-4">{messages.second}</p>
       <ContactForm />
     </div>
   );

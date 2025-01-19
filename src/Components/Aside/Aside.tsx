@@ -1,9 +1,14 @@
+import { basePath } from "@/constants/basePath";
+import { Section } from "@/constants/dictionaries/DictionaryType";
 import { FileUser, Github, Linkedin, Mail } from "lucide-react";
 import IconButton from "../_ui/IconButton";
 import { Separator } from "../_ui/Separator";
-import { basePath } from "@/constants/basePath";
 
-export const Aside = () => {
+type AsideProps = {
+  messages: Section,
+};
+
+export const Aside = ({ messages }: AsideProps) => {
 
   return (
     <aside
@@ -33,15 +38,15 @@ export const Aside = () => {
       "
     >
       <div className="text-pretty">
-        <h1>Welcome</h1>
-        <p className="italic">I am Mateus, a Computer Science Student at PUC Minas. I created this site to use as a portifolio for my work and experiences</p>
+        <h1>{messages.greeting}</h1>
+        <p className="italic">{messages.text}</p>
       </div>
 
       <Separator gradient />
 
       <div className="flex flex-row justify-evenly">
         <a
-          title="Send me an email"
+          title={messages.email}
           href="mailto:mateusvmaschietto@gmail.com"
           target="_blank"
         >
@@ -51,7 +56,7 @@ export const Aside = () => {
         </a>
 
         <a
-          title="Check my Github"
+          title={messages.github}
           href="https://github.com/Maschetti"
           target="_blank"
         >
@@ -61,7 +66,7 @@ export const Aside = () => {
         </a>
 
         <a
-          title="Check my Linkedin"
+          title={messages.linkedin}
           href="https://www.linkedin.com/in/mateus-viana-maschietto"
           target="_blank"
         >
@@ -71,7 +76,7 @@ export const Aside = () => {
         </a>
 
         <a
-          title="Check my Resume"
+          title={messages.resume}
           href={`${basePath}files/MateusVianaCVC.pdf`}
           download
         >

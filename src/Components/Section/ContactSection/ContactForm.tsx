@@ -1,6 +1,7 @@
 "use client"
 
 import { TextInput } from "@/Components/_ui/TextInput";
+import { useLanguage } from "@/hooks/LanguageContext";
 import { useState } from 'react';
 
 const ContactForm = () => {
@@ -14,6 +15,9 @@ const ContactForm = () => {
     // Aqui você pode enviar os dados do formulário
     console.log({ name, email, subject, message });
   };
+
+  const { getMessages } = useLanguage();
+  const formMessages = getMessages('contactForm');
 
   return (
     <form
@@ -30,51 +34,51 @@ const ContactForm = () => {
     >
 
       <div>
-        <label htmlFor="name" className="block text-sm font-medium">Nome</label>
+        <label htmlFor="name" className="block text-sm font-medium">{formMessages.name}</label>
         <TextInput
           id='name'
           value={name}
           required
           onChange={(e) => setName(e.target.value)}
-          placeholder='Your name...'
+          placeholder={formMessages.namePlaceholder}
           border
         />
       </div>
 
       <div>
-        <label htmlFor="email" className="block text-sm font-medium">E-mail</label>
+        <label htmlFor="email" className="block text-sm font-medium">{formMessages.email}</label>
         <TextInput
           type='email'
           id='email'
           value={email}
           required
           onChange={(e) => setEmail(e.target.value)}
-          placeholder='Your email...'
+          placeholder={formMessages.emailPlaceholder}
           border
         />
       </div>
 
       <div>
-        <label htmlFor="subject" className="block text-sm font-medium">Assunto</label>
+        <label htmlFor="subject" className="block text-sm font-medium">{formMessages.about}</label>
         <TextInput
           id='subject'
           value={subject}
           required
           onChange={(e) => setSubject(e.target.value)}
-          placeholder='What is the message about...'
+          placeholder={formMessages.aboutPlaceholder}
           border
         />
       </div>
 
       <div>
-        <label htmlFor="message" className="block text-sm font-medium">Mensagem</label>
+        <label htmlFor="message" className="block text-sm font-medium">{formMessages.message}</label>
         <textarea
           id="message"
           value={message}
           onChange={(e) => setMessage(e.target.value)}
           required
           rows={4}
-          placeholder='What is your message?'
+          placeholder={formMessages.messagePlaceholder}
           className="
             text-sm
             sm:text-lg
@@ -114,7 +118,7 @@ const ContactForm = () => {
             m-auto
           "
         >
-          Enviar
+          {formMessages.submit}
         </button>
       </div>
 
