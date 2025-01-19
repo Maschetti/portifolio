@@ -57,7 +57,7 @@ const pt = {
   },
 
   "footer": {
-    "text": "Direitos Autorais© 2025 · Mateus Viana Maschietto. Todos os direitos reservados. Este site foi criado com cuidado e paixão por desenvolvimento de software. Todo o conteúdo é original e reflete meu trabalho e experiência profissional. Se quiser saber mais ou colaborar, entre em contato: ",
+    "text": "Copyright© 2025 · Mateus Viana Maschietto. Todos os direitos reservados. Este site foi criado com cuidado e paixão por desenvolvimento de software. Todo o conteúdo é original e reflete meu trabalho e experiência profissional. Se quiser saber mais ou colaborar, entre em contato: ",
     "email": "mateusvmaschietto@gmail.com"
   }
 }
